@@ -1,0 +1,64 @@
+{
+  "consumer": {
+    "name": "ConsumerApp"
+  },
+  "interactions": [
+    {
+      "description": "a request for a user",
+      "providerState": "provider has a list of users",
+      "request": {
+        "method": "GET",
+        "path": "/user/1"
+      },
+      "response": {
+        "body": {
+          "id": 1,
+          "name": "John Doe"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for all users",
+      "providerState": "provider has a list of users",
+      "request": {
+        "method": "GET",
+        "path": "/users"
+      },
+      "response": {
+        "body": [
+          {
+            "id": 1,
+            "name": "John Doe"
+          },
+          {
+            "id": 2,
+            "name": "Jane Smith"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "ProviderApp"
+  }
+}
