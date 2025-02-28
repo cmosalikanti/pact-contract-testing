@@ -45,3 +45,6 @@ These tests will take the Pact (that was generated from the Consumer tests) and 
 ```
 npx mocha provider/provider.test.js
 ```
+
+### Execution
+![Run](images/pact-console.png)
