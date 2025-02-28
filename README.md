@@ -39,3 +39,9 @@ npm install
 ```
 npx mocha consumer/consumer.test.js
 ```
+
+### Provider tests
+These tests will take the Pact (that was generated from the Consumer tests) and verify the actual response from the Provider.
+```
+npx mocha provider/provider.test.js
+```
